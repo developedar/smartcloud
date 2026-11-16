@@ -1,0 +1,7 @@
+{
+  "data_url": "./data/measurements.json",
+  "demo": false,
+  "refresh_seconds": 15,
+  "github_raw": true,
+  "github_branch": "main"
+}

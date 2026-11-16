@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5dfef">
+  <meta name="description" content="مسیر قد کشیدن حسنا؛ داشبورد ستاره‌ای اندازه‌گیری قد و رشد">
+  <title>حسنا چقدر بزرگ شده؟ ⭐</title>
+  <link rel="icon" href="assets/star.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/Rokh-UltraBold.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="screen" aria-label="داشبورد قد حسنا">
+    <section class="stage" aria-label="حسنا چقدر بزرگ شده؟">
+      <img class="background" src="assets/dashboard-bg.png" width="1585" height="992" alt="اتاق کارتونی حسنا، ستاره قدسنج و کارت‌های مسیر رشد" fetchpriority="high">
+      <h1 class="sr-only">حسنا چقدر بزرگ شده؟</h1>
+      <button id="refresh" class="refresh hotspot" title="به‌روزرسانی داده‌ها" aria-label="به‌روزرسانی داده‌ها"></button>
+      <span id="status" class="status-label" role="status" aria-live="polite">در حال دریافت…</span>
+      <output id="latest" class="value latest" aria-label="آخرین قد حسنا" dir="ltr">—</output>
+      <output id="date" class="value date" aria-label="تاریخ آخرین اندازه‌گیری">—</output>
+      <output id="previous-growth" class="value previous-growth" aria-label="رشد از دفعه قبل" dir="ltr">—</output>
+      <output id="total-growth" class="value total-growth" aria-label="رشد از اولین ثبت" dir="ltr">—</output>
+      <output id="recency" class="value recency" aria-label="آخرین اندازه‌گیری">—</output>
+      <output id="father" class="value father" aria-label="قد بابا" dir="ltr">—</output>
+      <output id="girl" class="value girl" aria-label="قد حسنا در مقایسه با بابا" dir="ltr">—</output>
+      <output id="father-gap" class="value father-gap" aria-label="اختلاف قد تا بابا" dir="ltr">—</output>
+      <output id="target" class="value target" aria-label="هدف بعدی" dir="ltr">—</output>
+      <output id="remaining" class="value remaining" aria-label="فاصله تا هدف بعدی">—</output>
+      <output id="flag-target" class="value flag-target" aria-hidden="true"></output>
+      <div id="progress" class="progress" role="progressbar" aria-label="پیشرفت تا هدف بعدی" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <div id="chart" class="chart" role="group" aria-label="نمودار میله‌ای قد حسنا؛ جدیدترین اندازه‌گیری در سمت چپ"></div>
+      <div id="chart-dates" class="chart-dates" aria-hidden="true"></div>
+      <p id="empty" class="empty" hidden>هنوز قدی ثبت نشده ⭐<br><span>اولین اندازه‌گیری، شروع این قصه‌ست!</span></p>
+      <button id="history-button" class="hotspot history-hotspot" title="مشاهده همه اندازه‌گیری‌ها" aria-label="مشاهده همه اندازه‌گیری‌ها"></button>
+      <button id="settings-button" class="hotspot settings-hotspot" title="تنظیم منبع داده" aria-label="تنظیم منبع داده"></button>
+    </section>
+  </main>
+  <div id="notice" class="notice" role="alert" hidden></div>
+  <dialog id="settings-dialog" aria-labelledby="settings-heading">
+    <form id="settings-form">
+      <button class="close" type="button" data-close aria-label="بستن">×</button>
+      <span class="dialog-star" aria-hidden="true">⭐</span>
+      <h2 id="settings-heading">داده‌های قد حسنا</h2>
+      <p>آدرس فایل JSON گیت‌هاب را وارد کن؛ داشبورد خودش به‌روز می‌شود.</p>
+      <label for="data-url">آدرس فایل JSON</label>
+      <input id="data-url" type="url" dir="ltr" placeholder="https://raw.githubusercontent.com/…/measurements.json" autocomplete="off">
+      <small>لینک فایل عمومی GitHub یا لینک Raw قابل استفاده است.</small>
+      <div class="dialog-actions"><button class="primary" type="submit">اتصال به داده‌ها</button><button id="demo-button" class="secondary" type="button">دیدن نمونه</button></div>
+      <button id="empty-button" class="text-button" type="button">نمایش نسخه بدون داده</button>
+      <p class="source-note" id="source-note"></p>
+    </form>
+  </dialog>
+  <dialog id="history-dialog" aria-labelledby="history-heading">
+    <button class="close" type="button" data-close aria-label="بستن">×</button>
+    <span class="dialog-star" aria-hidden="true">🌱</span>
+    <h2 id="history-heading">قصه قد کشیدن حسنا</h2>
+    <p id="history-count"></p>
+    <div class="table-wrap"><table><thead><tr><th>تاریخ</th><th>قد (سانتی‌متر)</th><th>رشد از ثبت قبلی</th></tr></thead><tbody id="history-body"></tbody></table></div>
+  </dialog>
+</body>
+</html>

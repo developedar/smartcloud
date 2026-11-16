@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "timezone": "Asia/Tehran",
+  "child": "Hosna",
+  "measurements": [
+    { "height_cm": 121.4, "date": "۲۴ آبان ۱۴۰۵", "measured_at": "2026-11-15T12:30:00+03:30" },
+    { "height_cm": 120.2, "date": "۲۴ مهر ۱۴۰۵", "measured_at": "2026-10-16T12:30:00+03:30" },
+    { "height_cm": 118.6, "date": "۲۴ شهریور ۱۴۰۵", "measured_at": "2026-09-15T12:30:00+03:30" },
+    { "height_cm": 117.5, "date": "۲۴ مرداد ۱۴۰۵", "measured_at": "2026-08-15T12:30:00+03:30" },
+    { "height_cm": 116.2, "date": "۲۴ تیر ۱۴۰۵", "measured_at": "2026-07-15T12:30:00+03:30" },
+    { "height_cm": 115, "date": "۲۴ خرداد ۱۴۰۵", "measured_at": "2026-06-14T12:30:00+03:30" }
+  ],
+  "next_target": {
+    "father_height_cm": 178,
+    "height_cm": 125,
+    "remaining_to_father_cm": 56.6,
+    "remaining_cm": 3.6,
+    "baseline_height_cm": 115,
+    "progress_percent": 64
+  }
+}
